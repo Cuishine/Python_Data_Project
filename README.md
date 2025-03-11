@@ -28,7 +28,7 @@ To find the most demanded skills for the top 3 most populardata roles. I filtere
 
 To find the most demanded skills for the top 3 most popular data roles in the UK. I filtered out the locations in the UK and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles in the UK and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-View my note book with detailed steps here: [2_Skill_Deand.ipynb](3_Project\2_Skill_Demand.ipynb)
+View my note book with detailed steps here: [2_Skill_Deand.ipynb](images\skill_demand_all_data_roles.png)
 
 ### Visualize Data
 
@@ -51,7 +51,7 @@ plt.show()
 
 ### Reaults
 
-![Visualization of Top Skills for Data Nerds](3_Project\images\skill_demand_all_data_roles.png)
+![Visualization of Top Skills for Data Nerds](images\skill_demand_all_data_roles.png)
 
 
 ### Insights
@@ -91,7 +91,7 @@ plt.show()
 
 ### Results
 
-![Trending Top Skills for Data Analysts in the US](3_Project\images\Skills_Trend.png)
+![Trending Top Skills for Data Analysts in the US](images\Skills_Trend.png)
 *Line graph visualizing the Trending to skills for data analysts in the US in 2024.*
 
 ### Insights:
@@ -125,7 +125,7 @@ plt.show
 ```
 
 # Results
-![Salary distributions of Data Jobs in the US](3_Project\images\skills_Salary_Analysis.png)
+![Salary distributions of Data Jobs in the US](images\skills_Salary_Analysis.png)
 *Box plot visualizing the salary distributions for the top 6data job titles.*
 
 #### Insights
@@ -217,7 +217,7 @@ plt.show()
 ## 4. What is the most optimal skill to learn fro Data Analysts?
 
 #### Results
-![Most Optimal Skills for Data Analysts in the US](3_Project\images\Optima_Skills.png)
+![Most Optimal Skills for Data Analysts in the US](images\Optima_Skills.png)
 * A scatter plot visualizing the most optimal skills ( high paying & high demand) fro data analysts in the US.*
 
 
