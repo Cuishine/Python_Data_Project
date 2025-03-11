@@ -78,3 +78,79 @@ plt.show()
 - Excel experienced a significant increase in demand
 - Both Python and Tableau show relatively stable demand
 - Power BI is in the increase on demand
+
+
+# The Analysis
+
+## 3. How well do jobs and skills pay for Data Analysts?
+
+### Salary Analysit for Data Nerds
+
+#### Visualize Data
+
+```python
+sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order, palette='viridis', hue='job_title_short', dodge=False)
+sns.set_theme(style='ticks')
+
+plt.title('Salary Distribution in the United States')
+plt.xlabel('Yearly Salary ($USD)')
+plt.ylabel('')
+ax =plt.gca()
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}K'))
+plt.xlim(0,600000)
+plt.show
+
+```
+
+# Results
+![Salary distributions of Data Jobs in the US](3_Project\images\skills_Salary_Analysis.png)
+*Box plot visualizing the salary distributions for the top 6data job titles.*
+
+#### Insights
+
+-There's a significant variation in salary ranges across different job titles. Senior Data Scientist positions tend to have the highest salary potential.
+
+- Senior Data Engineer and Senior Data Scientist roles show a considerable number of outliers on teh higher end of the salary spectrum.
+
+- the median salaries increase with the seniiority and specialization of the roles. Senior roles.
+
+# Investigate Median Salary Vs Skill for Data Analysts
+
+
+
+### Highest Paid & Most Demanded Skills for Data Analysts
+#### Visualize Date
+
+
+``` pyhton
+# Top 10 Highest Paid Skills for Data Analysts
+fig, ax = plt.subplots(2,1)
+
+sns.set_theme(style="ticks")
+#df_DA_top_pay[::-1].plot(kind='barh', y='median', ax=ax[0], legend=False)
+sns.barplot(data=df_DA_Top_Pay, x='median', y=df_DA_Top_Pay.index, ax=ax[0], hue='median', palette='dark:b_r')
+
+
+ax[0].set_title('Top 10 Hightest Paid Skills for Data Analysts')
+ax[0].set_ylabel('')
+ax[0].set_xlabel('')
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
+ax[0].legend().remove()
+
+sns.set_theme(style="ticks")
+#df_DA_skills[::-1].plot(kind='barh', y='median', ax=ax[1], legend=False)
+sns.barplot(data=df_DA_skills, x='median', y=df_DA_skills.index, ax=ax[1],hue='median', palette='light:b')
+
+
+ax[1].set_title('Top 10 Most In-Demand Skills for Data Analysts')
+ax[1].set_ylabel('')
+ax[1].set_xlabel('Median Salary (USD)')
+ax[1].set_xlim(ax[0].get_xlim())
+ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
+ax[1].legend().remove()
+
+fig.tight_layout()
+plt.show()
+
+```
+
