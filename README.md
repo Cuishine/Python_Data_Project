@@ -152,5 +152,50 @@ ax[1].legend().remove()
 fig.tight_layout()
 plt.show()
 
+``` 
+
+
+```python
+from adjustText import adjust_text
+
+#df_plot.plot(kind='scatter',x='skill_percent', y='median_salary')
+sns.scatterplot(data=df_plot, x='skill_percent', y='median_salary', hue='technology')
+
+#sns.despine()
+sns.set_theme(style='ticks')
+
+
+plt.xlabel('Percent of Data Analyst Jobs')
+plt.ylabel("Median Yearly Salary ($USD)")
+plt.title('Most Optimal Skills for Data Analysts in the US')
+plt.tight_layout()
+
+
+texts = []
+
+for i, txt in enumerate(df_DA_skills_high_demand.index):
+   texts.append( plt.text(df_DA_skills_high_demand['skill_percent'].iloc[i], df_DA_skills_high_demand['median_salary'].iloc[i], txt))
+
+adjust_text(texts, arrowprops=dict(arrowstyle="->", color='grey', lw=1))
+
+from matplotlib.ticker import PercentFormatter
+
+ax=plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K' ))    
+ax.xaxis.set_major_formatter(PercentFormatter(decimals=0)) 
+
+plt.show()
+
 ```
+![Most Optimal Skills for Data Analysts in the US ]()
+*A scatter plot visualizing the most optimal skills ( high paying & high demand) for data analysts in the US.*
+
+
+# The Analysis
+## 4. What is the most optimal skill to learn fro Data Analysts?
+
+#### Results
+![Most Optimal Skills for Data Analysts in the US](3_Project\images\Optima_Skills.png)
+* A scatter plot visualizing the most optimal skills ( high paying & high demand) fro data analysts in the US.*
+
 
