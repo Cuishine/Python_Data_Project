@@ -1,3 +1,25 @@
+# Overview
+
+Welcome to my analysis of the data job market, focusing on data analyst roles. This project was created out of a desire to navigate and understand the job lmarket more effectively,
+
+# The Questions
+Below are the questions I want to answer in my project:
+
+    1. What are the skills most in demand for the top 3 most popular data roles?
+    2. How are in-demand shills trending for Data Analysts?
+    3. How well do jobs and skills pay for Data Analysts?
+    4. What are the optimal skills for data analysts to learn?( high Demand and High Paying)
+
+# Tools I Used
+
+for my deep dive into the dta analyst job market, I harnessed the power of several key tools:
+    1. Python:  The backbone of my analysis
+        Pandas library
+        Matplotlib Library
+        Seaborn Library
+
+
+
 # The Analysis
 Need to fill this in
 ## 1. What are the most demanded skills fro the top 3 most popular data roles?
