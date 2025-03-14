@@ -217,7 +217,7 @@ plt.show()
 ## 4. What is the most optimal skill to learn fro Data Analysts?
 
 #### Results
-![Most Optimal Skills for Data Analysts in the US](images\Optima_Skills.png)
+![Most Optimal Skills for Data Analysts in the US](images/Optima_Skills.png)
 * A scatter plot visualizing the most optimal skills ( high paying & high demand) fro data analysts in the US.*
 
 
